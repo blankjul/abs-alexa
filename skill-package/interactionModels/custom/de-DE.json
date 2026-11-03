@@ -1,0 +1,1187 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "time",
+              "elicitationRequired": true,
+              "type": "AMAZON.DURATION",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.454140924019.1491668277531"
+              }
+            }
+          ],
+          "name": "GoBackXTimeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "time",
+              "elicitationRequired": true,
+              "type": "AMAZON.DURATION",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1425758106737.86337652976"
+              }
+            }
+          ],
+          "name": "GoForwardXTimeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "title",
+              "elicitationRequired": false,
+              "type": "LIBRARY_TITLE",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "author",
+              "elicitationRequired": false,
+              "type": "LIBRARY_AUTHOR",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "PlayBookIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "chapterNumber",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.464967230894.1040650485539"
+              }
+            }
+          ],
+          "name": "GoToChapterX",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "beenden",
+            "abbrechen",
+            "schluss"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "PlayLastIntent",
+          "samples": [
+            "spiele das letzte Hörbuch",
+            "weiter hören",
+            "spiele weiter",
+            "mach da weiter wo ich aufgehört habe"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "RecentBooksIntent",
+          "samples": [
+            "was habe ich zuletzt gehört",
+            "was höre ich gerade",
+            "welche Hörbücher habe ich zuletzt gehört",
+            "meine letzten Hörbücher"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "time",
+              "type": "AMAZON.DURATION",
+              "samples": [
+                "{time} zurück",
+                "zurück {time}"
+              ]
+            }
+          ],
+          "name": "GoBackXTimeIntent",
+          "samples": [
+            "spule {time} zurück",
+            "gehe {time} zurück",
+            "zurück {time}",
+            "springe {time} zurück"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "time",
+              "type": "AMAZON.DURATION",
+              "samples": [
+                "{time} vor",
+                "vor {time}"
+              ]
+            }
+          ],
+          "name": "GoForwardXTimeIntent",
+          "samples": [
+            "spule {time} vor",
+            "gehe {time} vor",
+            "vor {time}",
+            "springe {time} vor",
+            "überspringe {time}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "title",
+              "type": "LIBRARY_TITLE"
+            },
+            {
+              "name": "author",
+              "type": "LIBRARY_AUTHOR"
+            }
+          ],
+          "name": "PlayBookIntent",
+          "samples": [
+            "spiele {title}",
+            "spiel {title}",
+            "starte {title}",
+            "ich möchte {title} hören",
+            "spiele {title} von {author}",
+            "spiele {title} vom Autor {author}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "chapterNumber",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "name": "GoToChapterX",
+          "samples": [
+            "gehe zu Kapitel {chapterNumber}",
+            "springe zu Kapitel {chapterNumber}",
+            "Kapitel {chapterNumber}"
+          ]
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "name": "LIBRARY_TITLE",
+          "values": [
+            {
+              "name": {
+                "value": "Im Zeichen der Zauberkugel 1 Das Abenteuer beginnt",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen Folge 232 Die Stadt aus Gold",
+                "synonyms": [
+                  "Die drei Fragezeichen Folge 232",
+                  "Die drei Fragezeichen 232",
+                  "Folge 232 Die drei Fragezeichen",
+                  "drei Fragezeichen Folge 232",
+                  "drei Fragezeichen 232",
+                  "Folge 232 drei Fragezeichen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen",
+                "synonyms": [
+                  "drei Fragezeichen"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "ALLE Hörbücher der Brüder Grimm Ungekürzt",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Robin Hood - Staffel 4",
+                "synonyms": [
+                  "Robin Hood Folge 4",
+                  "Robin Hood 4",
+                  "Folge 4 Robin Hood"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Robin Hood",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Robin Hood - Staffel 3",
+                "synonyms": [
+                  "Robin Hood Folge 3",
+                  "Robin Hood 3",
+                  "Folge 3 Robin Hood"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon Episoden S15 E02 Ein Brillanter Kampf in der Rayono City-Arena",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon Episoden S15 E01 Kamilla, Die Elektrisierende Arenaleiterin",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pika-Pikachu Pokémon Indigo-Liga Komplette Folge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Lucia startet durch Pokémon Diamant & Perl Komplette Folge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Kalos, Region der Träume und Abenteuer Pokémon – Die TV-Serie XY Komplette Folge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Im Schatten von Zekrom Pokémon – Die TV-Serie Schwarz & Weiß Komplette Folge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Finger weg von Karnimani Pokémon Die Johto Reisen Komplette Folge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Alola, neue Abenteuer Pokémon – Die TV-Serie Sonne & Mond Komplette Folge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen Kids Folge 98 Die Geisterpferde",
+                "synonyms": [
+                  "Die drei Fragezeichen Kids Folge 98",
+                  "Die drei Fragezeichen Kids 98",
+                  "Folge 98 Die drei Fragezeichen Kids",
+                  "drei Fragezeichen Kids Folge 98",
+                  "drei Fragezeichen Kids 98",
+                  "Folge 98 drei Fragezeichen Kids"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen Kids",
+                "synonyms": [
+                  "drei Fragezeichen Kids"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen Kids Folge 99 Football-Falle",
+                "synonyms": [
+                  "Die drei Fragezeichen Kids Folge 99",
+                  "Die drei Fragezeichen Kids 99",
+                  "Folge 99 Die drei Fragezeichen Kids",
+                  "drei Fragezeichen Kids Folge 99",
+                  "drei Fragezeichen Kids 99",
+                  "Folge 99 drei Fragezeichen Kids"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Gut E Kanto - Pokémon Kurzgeschichte Einzelhörspiel Deutsch Pokémon Hörspiel",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "E rgibt Sinnoh -- Pokémon Kurzgeschichte Hörspiel Deutsch Pokémon Hörspiel",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "E wie Einall - Pokémon Kurzgeschichte Einzelhörspiel Deutsch Pokémon Hörspiel",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Alola E - Pokémon Kurzgeschichte Einzelhörspiel Deutsch Pokémon Hörspiel",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Hits",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Musik",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Crazy Frog",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Lego NINJAGO Folgen 87-89 Drachen Anlocken",
+                "synonyms": [
+                  "LEGO Ninjago Folge 87",
+                  "LEGO Ninjago 87",
+                  "Folge 87 LEGO Ninjago",
+                  "Ninjago Folge 87",
+                  "Ninjago 87",
+                  "Folge 87 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "LEGO Ninjago",
+                "synonyms": [
+                  "Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lego NINJAGO Folgen 7-9 Tick Tock",
+                "synonyms": [
+                  "LEGO Ninjago Folge 7",
+                  "LEGO Ninjago 7",
+                  "Folge 7 LEGO Ninjago",
+                  "Ninjago Folge 7",
+                  "Ninjago 7",
+                  "Folge 7 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lego NINJAGO Folge 4-6 Traue niemals einer Schlange",
+                "synonyms": [
+                  "LEGO Ninjago Folge 4",
+                  "LEGO Ninjago 4",
+                  "Folge 4 LEGO Ninjago",
+                  "Ninjago Folge 4",
+                  "Ninjago 4",
+                  "Folge 4 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lego NINJAGO Folgen 13-15 Rettung In Letzter Sekunde",
+                "synonyms": [
+                  "LEGO Ninjago Folge 13",
+                  "LEGO Ninjago 13",
+                  "Folge 13 LEGO Ninjago",
+                  "Ninjago Folge 13",
+                  "Ninjago 13",
+                  "Folge 13 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lego NINJAGO Folgen 10-12 Der Grüne Ninja",
+                "synonyms": [
+                  "LEGO Ninjago Folge 10",
+                  "LEGO Ninjago 10",
+                  "Folge 10 LEGO Ninjago",
+                  "Ninjago Folge 10",
+                  "Ninjago 10",
+                  "Folge 10 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Lego NINJAGO Folge 1-3 Der Aufstieg der Schlangen",
+                "synonyms": [
+                  "LEGO Ninjago Folge 1",
+                  "LEGO Ninjago 1",
+                  "Folge 1 LEGO Ninjago",
+                  "Ninjago Folge 1",
+                  "Ninjago 1",
+                  "Folge 1 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 180 Gezeitenwende",
+                "synonyms": [
+                  "LEGO Ninjago Folge 180",
+                  "LEGO Ninjago 180",
+                  "Folge 180 LEGO Ninjago",
+                  "Ninjago Folge 180",
+                  "Ninjago 180",
+                  "Folge 180 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 179 Nyad",
+                "synonyms": [
+                  "LEGO Ninjago Folge 179",
+                  "LEGO Ninjago 179",
+                  "Folge 179 LEGO Ninjago",
+                  "Ninjago Folge 179",
+                  "Ninjago 179",
+                  "Folge 179 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 178 Ninjago unter Wasser",
+                "synonyms": [
+                  "LEGO Ninjago Folge 178",
+                  "LEGO Ninjago 178",
+                  "Folge 178 LEGO Ninjago",
+                  "Ninjago Folge 178",
+                  "Ninjago 178",
+                  "Folge 178 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 177 Die Ruhe vor dem Sturm",
+                "synonyms": [
+                  "LEGO Ninjago Folge 177",
+                  "LEGO Ninjago 177",
+                  "Folge 177 LEGO Ninjago",
+                  "Ninjago Folge 177",
+                  "Ninjago 177",
+                  "Folge 177 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 176 Meisterin des Meeres",
+                "synonyms": [
+                  "LEGO Ninjago Folge 176",
+                  "LEGO Ninjago 176",
+                  "Folge 176 LEGO Ninjago",
+                  "Ninjago Folge 176",
+                  "Ninjago 176",
+                  "Folge 176 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 175 Die Zeitungsbotin",
+                "synonyms": [
+                  "LEGO Ninjago Folge 175",
+                  "LEGO Ninjago 175",
+                  "Folge 175 LEGO Ninjago",
+                  "Ninjago Folge 175",
+                  "Ninjago 175",
+                  "Folge 175 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 174 Das Rätsel der Sphinx",
+                "synonyms": [
+                  "LEGO Ninjago Folge 174",
+                  "LEGO Ninjago 174",
+                  "Folge 174 LEGO Ninjago",
+                  "Ninjago Folge 174",
+                  "Ninjago 174",
+                  "Folge 174 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 173 Das Sturm-Amulett",
+                "synonyms": [
+                  "LEGO Ninjago Folge 173",
+                  "LEGO Ninjago 173",
+                  "Folge 173 LEGO Ninjago",
+                  "Ninjago Folge 173",
+                  "Ninjago 173",
+                  "Folge 173 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 172 Die Geschichte von Bentho",
+                "synonyms": [
+                  "LEGO Ninjago Folge 172",
+                  "LEGO Ninjago 172",
+                  "Folge 172 LEGO Ninjago",
+                  "Ninjago Folge 172",
+                  "Ninjago 172",
+                  "Folge 172 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 171 Befreiung aus Merlopia",
+                "synonyms": [
+                  "LEGO Ninjago Folge 171",
+                  "LEGO Ninjago 171",
+                  "Folge 171 LEGO Ninjago",
+                  "Ninjago Folge 171",
+                  "Ninjago 171",
+                  "Folge 171 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 170 Lang lebe der König",
+                "synonyms": [
+                  "LEGO Ninjago Folge 170",
+                  "LEGO Ninjago 170",
+                  "Folge 170 LEGO Ninjago",
+                  "Ninjago Folge 170",
+                  "Ninjago 170",
+                  "Folge 170 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 169 Ärger mit Kalmaar",
+                "synonyms": [
+                  "LEGO Ninjago Folge 169",
+                  "LEGO Ninjago 169",
+                  "Folge 169 LEGO Ninjago",
+                  "Ninjago Folge 169",
+                  "Ninjago 169",
+                  "Folge 169 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 168 Fünfzehntausend Meter tie",
+                "synonyms": [
+                  "LEGO Ninjago Folge 168",
+                  "LEGO Ninjago 168",
+                  "Folge 168 LEGO Ninjago",
+                  "Ninjago Folge 168",
+                  "Ninjago 168",
+                  "Folge 168 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 167 Auf Tauchstation",
+                "synonyms": [
+                  "LEGO Ninjago Folge 167",
+                  "LEGO Ninjago 167",
+                  "Folge 167 LEGO Ninjago",
+                  "Ninjago Folge 167",
+                  "Ninjago 167",
+                  "Folge 167 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 166 Der Ruf der Tiefe",
+                "synonyms": [
+                  "LEGO Ninjago Folge 166",
+                  "LEGO Ninjago 166",
+                  "Folge 166 LEGO Ninjago",
+                  "Ninjago Folge 166",
+                  "Ninjago 166",
+                  "Folge 166 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 165 Ein Wasserproblem",
+                "synonyms": [
+                  "LEGO Ninjago Folge 165",
+                  "LEGO Ninjago 165",
+                  "Folge 165 LEGO Ninjago",
+                  "Ninjago Folge 165",
+                  "Ninjago 165",
+                  "Folge 165 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 164 Der Zahn der Wojira",
+                "synonyms": [
+                  "LEGO Ninjago Folge 164",
+                  "LEGO Ninjago 164",
+                  "Folge 164 LEGO Ninjago",
+                  "Ninjago Folge 164",
+                  "Ninjago 164",
+                  "Folge 164 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 163 Ein Geschenk namens Jay",
+                "synonyms": [
+                  "LEGO Ninjago Folge 163",
+                  "LEGO Ninjago 163",
+                  "Folge 163 LEGO Ninjago",
+                  "Ninjago Folge 163",
+                  "Ninjago 163",
+                  "Folge 163 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 162 Die Hüter des Amuletts",
+                "synonyms": [
+                  "LEGO Ninjago Folge 162",
+                  "LEGO Ninjago 162",
+                  "Folge 162 LEGO Ninjago",
+                  "Ninjago Folge 162",
+                  "Ninjago 162",
+                  "Folge 162 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 161 Die geheime Insel",
+                "synonyms": [
+                  "LEGO Ninjago Folge 161",
+                  "LEGO Ninjago 161",
+                  "Folge 161 LEGO Ninjago",
+                  "Ninjago Folge 161",
+                  "Ninjago 161",
+                  "Folge 161 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 160 Der Sohn von Lilly",
+                "synonyms": [
+                  "LEGO Ninjago Folge 160",
+                  "LEGO Ninjago 160",
+                  "Folge 160 LEGO Ninjago",
+                  "Ninjago Folge 160",
+                  "Ninjago 160",
+                  "Folge 160 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 159 Die Oblies schlagen zurück",
+                "synonyms": [
+                  "LEGO Ninjago Folge 159",
+                  "LEGO Ninjago 159",
+                  "Folge 159 LEGO Ninjago",
+                  "Ninjago Folge 159",
+                  "Ninjago 159",
+                  "Folge 159 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 158 Der Aufstieg",
+                "synonyms": [
+                  "LEGO Ninjago Folge 158",
+                  "LEGO Ninjago 158",
+                  "Folge 158 LEGO Ninjago",
+                  "Ninjago Folge 158",
+                  "Ninjago 158",
+                  "Folge 158 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 157 Die Schutz-Höhle",
+                "synonyms": [
+                  "LEGO Ninjago Folge 157",
+                  "LEGO Ninjago 157",
+                  "Folge 157 LEGO Ninjago",
+                  "Ninjago Folge 157",
+                  "Ninjago 157",
+                  "Folge 157 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 156 Meister geben niemals auf",
+                "synonyms": [
+                  "LEGO Ninjago Folge 156",
+                  "LEGO Ninjago 156",
+                  "Folge 156 LEGO Ninjago",
+                  "Ninjago Folge 156",
+                  "Ninjago 156",
+                  "Folge 156 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 155 Der Gigant-Drache",
+                "synonyms": [
+                  "LEGO Ninjago Folge 155",
+                  "LEGO Ninjago 155",
+                  "Folge 155 LEGO Ninjago",
+                  "Ninjago Folge 155",
+                  "Ninjago 155",
+                  "Folge 155 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 154 Cole und sein Element",
+                "synonyms": [
+                  "LEGO Ninjago Folge 154",
+                  "LEGO Ninjago 154",
+                  "Folge 154 LEGO Ninjago",
+                  "Ninjago Folge 154",
+                  "Ninjago 154",
+                  "Folge 154 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 153 Höhlen-Party",
+                "synonyms": [
+                  "LEGO Ninjago Folge 153",
+                  "LEGO Ninjago 153",
+                  "Folge 153 LEGO Ninjago",
+                  "Ninjago Folge 153",
+                  "Ninjago 153",
+                  "Folge 153 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 152 Der tiefe Fall",
+                "synonyms": [
+                  "LEGO Ninjago Folge 152",
+                  "LEGO Ninjago 152",
+                  "Folge 152 LEGO Ninjago",
+                  "Ninjago Folge 152",
+                  "Ninjago 152",
+                  "Folge 152 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 151 Der Totenkopf-Zauberer",
+                "synonyms": [
+                  "LEGO Ninjago Folge 151",
+                  "LEGO Ninjago 151",
+                  "Folge 151 LEGO Ninjago",
+                  "Ninjago Folge 151",
+                  "Ninjago 151",
+                  "Folge 151 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 150 Die Prüfung des Mino",
+                "synonyms": [
+                  "LEGO Ninjago Folge 150",
+                  "LEGO Ninjago 150",
+                  "Folge 150 LEGO Ninjago",
+                  "Ninjago Folge 150",
+                  "Ninjago 150",
+                  "Folge 150 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 149 Königin Murtessa",
+                "synonyms": [
+                  "LEGO Ninjago Folge 149",
+                  "LEGO Ninjago 149",
+                  "Folge 149 LEGO Ninjago",
+                  "Ninjago Folge 149",
+                  "Ninjago 149",
+                  "Folge 149 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 148 Die doppelten Klingen",
+                "synonyms": [
+                  "LEGO Ninjago Folge 148",
+                  "LEGO Ninjago 148",
+                  "Folge 148 LEGO Ninjago",
+                  "Ninjago Folge 148",
+                  "Ninjago 148",
+                  "Folge 148 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 147 Die schlechteste Rettungsaktion aller Zeiten",
+                "synonyms": [
+                  "LEGO Ninjago Folge 147",
+                  "LEGO Ninjago 147",
+                  "Folge 147 LEGO Ninjago",
+                  "Ninjago Folge 147",
+                  "Ninjago 147",
+                  "Folge 147 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 146 In der Finsternis",
+                "synonyms": [
+                  "LEGO Ninjago Folge 146",
+                  "LEGO Ninjago 146",
+                  "Folge 146 LEGO Ninjago",
+                  "Ninjago Folge 146",
+                  "Ninjago 146",
+                  "Folge 146 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Folge 145 Shintaro",
+                "synonyms": [
+                  "LEGO Ninjago Folge 145",
+                  "LEGO Ninjago 145",
+                  "Folge 145 LEGO Ninjago",
+                  "Ninjago Folge 145",
+                  "Ninjago 145",
+                  "Folge 145 Ninjago"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon Reisen Deutsch Folge 1",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon Horizonte Deutsch Folge 3",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon Horizonte Deutsch Folge 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon Horizonte Deutsch Folge 1",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokemon Im Schatten von Zekrom",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Minions & Monsters Soundtrack",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "POKÉMON DUNKLE SEELEN 🌟 Hörspiel Komplett German Deutsch",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Volcanic Panic POKÉMON FULL EPISODE 4 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "The Purr-fect Hero POKÉMON FULL EPISODE 2 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "The Misty Mermaid POKÉMON FULL EPISODE 6 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "The Battle of the Badge POKÉMON FULL EPISODE 8 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Riddle Me This POKÉMON FULL EPISODE 3 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Princess vs. Princess POKÉMON FULL EPISODE 1 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "It’s Mr. Mime Time POKÉMON FULL EPISODE 9 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Clefairy Tales POKÉMON FULL EPISODE 7 Season 2",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Chikorita Rescue POKÉMON FULL EPISODE 10 Season 3",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Beach Blank-out Blastoise POKÉMON FULL EPISODE 5 Season 2",
+                "synonyms": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "LIBRARY_AUTHOR",
+          "values": [
+            {
+              "name": {
+                "value": "Im Zeichen der Zauberkugel",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Brüder Grimm",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Robin Hood",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Offizieller Pokémon Youtube Kanal",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Die drei Fragezeichen Kids",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Lou E Coyote",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Goldy Lyrics",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Musik",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "LEGO Ninjago",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "John Powell",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "STORYoshi",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pokémon TV",
+                "synonyms": []
+              }
+            }
+          ]
+        }
+      ],
+      "invocationName": "mein hörbuchregal"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Zum Beispiel: gehe fünfzehn Sekunden zurück."
+          }
+        ],
+        "id": "Elicit.Slot.454140924019.1491668277531"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Zum Beispiel: spule fünfzehn Sekunden vor."
+          }
+        ],
+        "id": "Elicit.Slot.1425758106737.86337652976"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Zum Beispiel: gehe zu Kapitel zwölf."
+          }
+        ],
+        "id": "Elicit.Slot.464967230894.1040650485539"
+      }
+    ]
+  }
+}

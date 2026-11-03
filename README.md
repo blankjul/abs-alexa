@@ -19,6 +19,24 @@ This is an Alexa Skill that can be used to control your personal Audiobookshelf 
 - performs an an API "search" that is built-in to ABS
 - if this fails, pulls all books from library and then performs a fuzzy search (effective, but may be resource intensive on large libraries)
 
+## Languages
+
+The skill answers in the language of the request. English (`en-US`) is the default; German (`de-DE`) is
+included. Both can be enabled in the same skill. Spoken texts live in `lambda/lib/i18n.js`, so another
+language only needs a block there and an interaction model.
+
+The German model recognises the real names in your library (titles, series, authors) instead of generic
+book names. Generate it from your server and import it in the developer console:
+
+```bash
+SERVER_URL=https://abs.example.com ABS_API_KEY=xxx node scripts/build-model-de.js
+# optional: INVOCATION_NAME="mein hörbuchregal"
+```
+
+Run it again after adding books. Use an API key of a user that only sees the libraries the skill should play.
+
+Libraries are searched when they are marked "audiobooks only"; if none is, all book libraries are searched.
+
 ## Installation:
 1) Fork this repo
 2) Provide your **Audiobookshelf API key** and **server URL**. Either way works; environment variables take precedence.

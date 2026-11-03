@@ -213,11 +213,15 @@ function getAllLibraries() {
   }
 }
 
+// Libraries to search: those marked "audiobooks only", or every book library when none is.
+function getAudiobookLibraryIds(libraries = getAllLibraries()) {
+  const bookLibraries = libraries.filter(library => library.mediaType === 'book');
+  const audiobooksOnly = bookLibraries.filter(library => library.settings && library.settings.audiobooksOnly);
+  return (audiobooksOnly.length > 0 ? audiobooksOnly : bookLibraries).map(library => library.id);
+}
+
 function getAllAudiobooks() {
-  const allLibraries = getAllLibraries()
-  const bookLibraries = allLibraries.filter(library => library.mediaType === 'book');
-  const audiobooksOnlyLibraries = bookLibraries.filter(library => library.settings.audiobooksOnly);
-  const bookLibraryIDs = audiobooksOnlyLibraries.map(library => library.id);
+  const bookLibraryIDs = getAudiobookLibraryIds();
   const allLibraryItems = [];
 
 
@@ -329,5 +333,5 @@ function searchFor(query, libraryID) {
 
 module.exports = { getRecentLibraryItems, getLastPlayedLibraryItem, getItemById, startUserPlaySession,
   getExistingUserPlaySession, updateMediaProgress, updateUserPlaySession,
-  closeUserPlaySession, getCoverUrl, getLibraryFilterData, getAllLibraries,
+  closeUserPlaySession, getCoverUrl, getLibraryFilterData, getAllLibraries, getAudiobookLibraryIds,
   getAllAudiobooks, getLibraryItems, getAuthor, buildLibrarySearchUrl, searchFor };
