@@ -59,18 +59,17 @@
           "summary": "Listen to audiobooks from your own Audiobookshelf server. Resume where you left off, jump between chapters, and keep progress in sync."
         },
         "de-DE": {
-          "name": "Hörbuchregal",
+          "name": "Audio Book Shelf",
           "summary": "Hörbücher und Hörspiele vom eigenen Audiobookshelf-Server abspielen, fortsetzen und zwischen Kapiteln springen.",
           "description": "Spielt Hörbücher und Hörspiele von deinem eigenen Audiobookshelf-Server auf Echo-Geräten.\n\nSag \"spiele das letzte Hörbuch\", um dort weiterzuhören, wo du aufgehört hast, oder nenne einen Titel, zum Beispiel \"spiele Ninjago Folge fünf\".\n\nFunktionen:\n- Zuletzt gehörtes Hörbuch fortsetzen oder per Titel starten\n- Kapitel vor und zurück\n- Zeit vor- und zurückspulen, zum Beispiel \"spule zwei Minuten zurück\"\n- Der Hörfortschritt wird auf dem Audiobookshelf-Server gespeichert\n\nVoraussetzung: ein eigener, öffentlich erreichbarer Audiobookshelf-Server und ein API-Schlüssel, die du bei der Einrichtung angibst.",
           "examplePhrases": [
-            "spiele das letzte Hörbuch",
-            "spiele Ninjago Folge fünf",
-            "spule zwei Minuten zurück"
+            "Alexa, öffne audio book shelf",
+            "Alexa, öffne audio book shelf und spiele Ninjago",
+            "Alexa, frage audio book shelf was ich zuletzt gehört habe"
           ],
           "keywords": [
-            "Hörbuch",
-            "Hörbücher",
-            "Hörspiel",
+            "Hörspiele",
+            "Geschichten",
             "audiobookshelf",
             "selbst gehostet",
             "Bibliothek"
