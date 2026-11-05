@@ -30,7 +30,7 @@ book names. Generate it from your server and import it in the developer console:
 
 ```bash
 SERVER_URL=https://abs.example.com ABS_API_KEY=xxx node scripts/build-model-de.js
-# optional: INVOCATION_NAME="mein hörbuchregal"
+# optional: INVOCATION_NAME="geschichten kiste"
 ```
 
 Run it again after adding books. Use an API key of a user that only sees the libraries the skill should play.

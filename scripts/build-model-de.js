@@ -10,7 +10,7 @@ const path = require('path');
 const { SERVER_URL, ABS_API_KEY } = process.env;
 if (!SERVER_URL || !ABS_API_KEY) throw new Error('Set SERVER_URL and ABS_API_KEY');
 const dir = path.join(__dirname, '..', 'skill-package', 'interactionModels', 'custom');
-const INVOCATION = process.env.INVOCATION_NAME || 'mein hörbuchregal';
+const INVOCATION = process.env.INVOCATION_NAME || 'geschichten kiste';
 
 async function get(p) {
   const res = await fetch(SERVER_URL.replace(/\/$/, '') + p, { headers: { Authorization: 'Bearer ' + ABS_API_KEY } });
@@ -28,6 +28,9 @@ function addValue(map, name, synonyms) {
   for (const s of synonyms) {
     const c = clean(s);
     if (c && c.toLowerCase() !== key.toLowerCase()) entry.synonyms.add(c);
+    // Alexa turns spoken numbers into digits ("drei" -> "3"), so the digit form must match as well.
+    const digits = c.replace(/\bdrei\b/gi, '3');
+    if (digits !== c && digits.toLowerCase() !== key.toLowerCase()) entry.synonyms.add(digits);
   }
   map.set(key.toLowerCase(), entry);
 }
